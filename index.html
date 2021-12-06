@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assesst/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assesst/owlcarousel/assets/owl.theme.default.min.css">
+
+    <script src="./assesst/owlcarousel/jquery-3.6.0.min.js"></script>
+    <script src="./assesst/owlcarousel/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="./assesst/css/base.css">
+    <link rel="stylesheet" href="./assesst/css/grid.css">
+    <link rel="stylesheet" href="./assesst/css/main.css">
+    <link rel="stylesheet" href="./assesst/css/normalize.css">
+    <link rel="stylesheet" href="./assesst/css/responsive.css">
+    <link rel="stylesheet" href="./assesst/font/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://a0.muscache.com/airbnb/static/logotype_favicon-21cc8e6c6a2cca43f061d2dcabdf6e58.ico" type="image/x-icon">
+
+
+    <title>Airbnb: Nhà nghỉ dưỡng cho thuê, Cabin, Nhà trên bãi biển, Nhà và Trải nghiệm độc đáo</title>
+</head>
+
+<body>
+    <div class="wrapper" id=" wrapper ">
+        <div class="header">
+            <div class="grid">
+                <div class="header_navbar">
+                    <div class="header_navbar-list">
+                        <div class="header_navbar-logo">
+                            <a href="/">
+                                <img class="header_logo-img" src="./assesst/img/logo.png" alt="Logo.png">
+                            </a>
+                        </div>
+                        <div class="header_navbar-menu hide-on-tablet">
+                            <div class="navbar_menu-label">
+                                <label class="header_navbar-label" for="">Nơi ở</label>
+                                <label class="header_navbar-label" for="">Trải nghiệm</label>
+                                <label class="header_navbar-label" for="">Trải nghiệm trực tuyến </label>
+                            </div>
+
+
+                        </div>
+
+                        <div class="header_navbar-user">
+                            <label class="navbar_user-label" for="">Trở thành chủ nhà</label>
+                            <!-- <div class="navbar_user-icon">
+                                <i class="fas fa-globe "></i>
+                            </div> -->
+                            <div class="navbar_user-list">
+                                <button class="user_list-button">
+                                    <i id="button-menu " onclick ="click_menu_user()"class="fas fa-bars user_list-icon-menu hide-menu"></i>
+                                    <i id="button-user" onclick ="click_menu_user()"class="fas fa-user-circle user_list-icon-user"></i>
+                                </button>
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="user_list-menu">
+                        <div class="menu_list">
+                            <ul>
+                                <li class="menu_list-label" style="font-weight: 400 ; color:var(--black-color)">Đăng ký</li>
+                                <li class="menu_list-label">Đăng nhập </li>
+                            </ul>
+                            <ul style="border-top: 1px solid rgba(0, 0, 0, 0.05)">
+                                <li class="menu_list-label">Cho thuê nhà</li>
+                                <li class="menu_list-label">Tổ chức trải nghiệm </li>
+                                <li class="menu_list-label">Trợ giúp</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_navbar-search">
+                    <div class="navbar_search-form">
+                        <div class="search_form-list">
+                            <div class="search_form-item">
+                                <div class="form_item-list" id="form_item-list" onclick="show_search()">
+
+                                    <div class="search_form-label">
+                                        Địa điểm
+                                    </div>
+                                    <input for="form_item-list" class="search_form-input" type="text" placeholder="Bạn sắp đi đâu?">
+                                    <div class="form_search js_form-search">
+                                        <div class="form_search-label">
+                                            <div class="search_label">Mọi lúc , mọi nơi</div>
+                                            <div class="form_search-button">
+                                                <span>Tìm kiếm linh hoạt</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="search_form-item">
+                                <div class="form_item-list">
+                                    <div class="search_form-label">
+                                        Nhận phòng
+                                    </div>
+                                    <div class="search_form-input">
+                                        Thêm ngày
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_form-item">
+                                <div class="form_item-list">
+                                    <div class="search_form-label">
+                                        Trả phòng
+                                    </div>
+                                    <div class="search_form-input">
+                                        Thêm ngày
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search_form-item ">
+                                <div class="form_item-list form_item-last ">
+                                    <div class="form_label js_button-user">
+                                        <div onclick="click_show_quantity()" class="search_form-label">
+                                            Khách
+                                        </div>
+                                        <div onclick="click_show_quantity()" class="search_form-input">
+                                            Thêm khách
+                                        </div>
+                                    </div>
+                                    <div class="search_form-icon">
+                                        <i class="fas fa-search item_search-icon"></i>
+                                    </div>
+                                    <div class="form_user-quantity js-quantity">
+                                        <div class="user_quantity-list">
+                                            <div class="user_quantity-item">
+                                                <div class="quantity_item-label">
+                                                    <div>Người lớn</div>
+                                                    <span>Từ 13 tuổi trở lên</span>
+                                                </div>
+                                                <div class="quantity_item-count">
+                                                    <button class="item_count-icon">
+                                                    <i class="fas fa-minus icon_minus"></i>
+                                                   </button>
+                                                    <span>0</span>
+                                                    <button class="item_count-icon">
+                                                        <i class="fas fa-plus"></i>
+                                                       </button>
+                                                </div>
+                                            </div>
+                                            <div class="user_quantity-item">
+                                                <div class="quantity_item-label">
+                                                    <div>Trẻ em </div>
+                                                    <span>Độ tuổi 2 - 12</span>
+                                                </div>
+                                                <div class="quantity_item-count">
+                                                    <button class="item_count-icon">
+                                                        <i class="fas fa-minus icon_minus"></i>
+                                                   </button>
+                                                    <span>0</span>
+                                                    <button class="item_count-icon">
+                                                        <i class="fas fa-plus"></i>
+                                                       </button>
+                                                </div>
+                                            </div>
+                                            <div class="user_quantity-item">
+                                                <div class="quantity_item-label">
+                                                    <div>Em bé</div>
+                                                    <span>Dưới 2</span>
+                                                </div>
+                                                <div class="quantity_item-count">
+                                                    <button class="item_count-icon">
+                                                    <i class="fas fa-minus icon_minus"></i>
+                                                   </button>
+                                                    <span>0</span>
+                                                    <button class="item_count-icon">
+                                                        <i class="fas fa-plus"></i>
+                                                       </button>
+                                                </div>
+                                            </div>
+                                            <div class="user_quantity-item">
+                                                <div class="quantity_item-label">
+                                                    <div>Thú cưng</div>
+                                                    <span style="text-decoration: underline; ">Bạn muốn mang theo động vật hỗ trợ </span>
+                                                </div>
+                                                <div class="quantity_item-count">
+                                                    <button class="item_count-icon">
+                                                    <i class="fas fa-minus icon_minus"></i>
+                                                   </button>
+                                                    <span>0</span>
+                                                    <button class="item_count-icon">
+                                                        <i class="fas fa-plus"></i>
+                                                       </button>
+                                                </div>
+                                            </div>
+                                            <div class="user_quantity-item">
+                                                <span style=" color: var(--text-color) ; font-size: 14px; font-weight: 300; cursor: default;">Nếu bạn may mắn có nhiều hơn 2 thú cưng đi cùng, hãy nhớ cho Chủ nhà biết</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="header_search-mobile hide-on-pc hide-on-tablet">
+                    <div class="search_mobile-button">
+                        <div class="mobile_button">
+                            <i class="fas fa-search mobile_search-icon"></i><span>Bạn sắp đi đâu?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="header_banner">
+
+                <div class="header_banner-img" alt="Một vị khách đứng vẫy tay ở cửa ra vào của một ngôi nhà vòm có vẻ ngoài độc đáo vào lúc hoàng hôn, ngập trong ánh sáng ấm áp, thân thiện.">
+
+
+                    <div class="header_banner-list">
+                        <div class="banner-label-list">
+                            <h1 class="header_banner-label">Bạn chưa biết nên đi đâu? </h1>
+                            <div class="header_banner-label">Tuyệt</div>
+
+                            <span class="header_banner-button">
+                            <span class="banner_button-label">Tìm kiếm linh hoạt</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="content">
+            <div class="content_list">
+                <div class="grid">
+                    <h1 class="content-heading">Cảm hứng cho chuyến đi tiếp theo của bạn</h1>
+
+                    <div class="row hide-on-mobile hide-on-tablet">
+                        <div class="col l-3 content_img-desc">
+                            <div class="content-img">
+                                <img class="content-img" src="https://a0.muscache.com/im/pictures/f73eff6c-cffd-4462-a2bf-9417f5d2fbe9.jpg?im_w=320" alt="">
+                            </div>
+                            <div class="content-description">
+                                <div class="content_desc">
+                                    <h1 class="content_desc-heading">Thành phố Hồ Chí Minh </h1>
+                                    <p>Cách 433 km</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 content_img-desc">
+                            <div class="content-img">
+                                <img class="content-img" src="https://a0.muscache.com/im/pictures/3a7b8005-28b8-48b8-8efa-0a6a00f7d5d8.jpg?im_q=highq&im_w=720" alt="">
+                            </div>
+                            <div class="content-description" style="background-color: #d93b30;">
+                                <div class="content_desc">
+                                    <h1 class="content_desc-heading">Nha Trang </h1>
+                                    <p>Cách 170 km</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 content_img-desc">
+                            <div class="content-img">
+                                <img class="content-img" src="https://a0.muscache.com/im/pictures/39fe1579-b443-4cc4-bf35-e07378f3670e.jpg?im_q=highq&im_w=720" alt="">
+                            </div>
+                            <div class="content-description" style="background-color: #cc2d4a;">
+                                <div class="content_desc">
+                                    <h1 class="content_desc-heading">Thành phố Hội An</h1>
+                                    <p>Cách 254 km</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 content_img-desc">
+                            <div class="content-img">
+                                <img class="content-img" src="https://a0.muscache.com/im/pictures/aff9e173-b551-44e4-80f3-bd9b9d632f8b.jpg?im_q=highq&im_w=720" alt="">
+                            </div>
+                            <div class="content-description" style="background-color: #de3151;">
+                                <div class="content_desc">
+                                    <h1 class="content_desc-heading">Vũng Tàu</h1>
+                                    <p>Cách 437 km</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- owlcarousel -->
+                    <div class="hide-on-pc">
+                        <div class="owl-carousel owl-theme ">
+                            <div class=" content_img-desc">
+                                <div class="content-img">
+                                    <img class="content-img" src="https://a0.muscache.com/im/pictures/f73eff6c-cffd-4462-a2bf-9417f5d2fbe9.jpg?im_w=320" alt="">
+                                </div>
+                                <div class="content-description">
+                                    <div class="content_desc">
+                                        <h1 class="content_desc-heading">Thành phố Hồ Chí Minh </h1>
+                                        <p>Cách 433 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" content_img-desc">
+                                <div class="content-img">
+                                    <img class="content-img" src="https://a0.muscache.com/im/pictures/3a7b8005-28b8-48b8-8efa-0a6a00f7d5d8.jpg?im_q=highq&im_w=720" alt="">
+                                </div>
+                                <div class="content-description" style="background-color: #d93b30;">
+                                    <div class="content_desc">
+                                        <h1 class="content_desc-heading">Nha Trang </h1>
+                                        <p>Cách 170 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" content_img-desc">
+                                <div class="content-img">
+                                    <img class="content-img" src="https://a0.muscache.com/im/pictures/39fe1579-b443-4cc4-bf35-e07378f3670e.jpg?im_q=highq&im_w=720" alt="">
+                                </div>
+                                <div class="content-description" style="background-color: #cc2d4a;">
+                                    <div class="content_desc">
+                                        <h1 class="content_desc-heading">Thành phố Hội An</h1>
+                                        <p>Cách 254 km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" content_img-desc">
+                                <div class="content-img">
+                                    <img class="content-img" src="https://a0.muscache.com/im/pictures/aff9e173-b551-44e4-80f3-bd9b9d632f8b.jpg?im_q=highq&im_w=720" alt="">
+                                </div>
+                                <div class="content-description" style="background-color: #de3151;">
+                                    <div class="content_desc">
+                                        <h1 class="content_desc-heading">Vũng Tàu</h1>
+                                        <p>Cách 437 km</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="discover">
+            <div class="grid">
+                <h1 class="discover-heading">Khám phá trải nghiệm Airbnb</h1>
+                <div class="row padding-80   ">
+                    <div class="col l-6">
+                        <div class="discover_image hide-on-mobile hide-on-tablet" style=" background-image: url('https://a0.muscache.com/im/pictures/3290306e-8e26-4c77-a96a-777e554c5222.jpg?im_w=720');">
+                            <div class="discover_description">
+                                <h1 class="discover_heading">Những điều nên trải nghiệm trong chuyến đi của bạn</h1>
+                                <label class="discover_button">Trải nghiệm</label>
+                            </div>
+                        </div>
+                        <div class="discover_image-tablet hide-on-mobile hide-on-pc" style=" background-image: url('https://a0.muscache.com/im/pictures/3290306e-8e26-4c77-a96a-777e554c5222.jpg?im_w=720');">
+                            <div class="discover_description">
+                                <h1 class="discover_heading">Những điều nên trải nghiệm trong chuyến đi của bạn</h1>
+                                <label class="discover_button">Trải nghiệm</label>
+                            </div>
+                        </div>
+                        <div class="discover_image-mobile hide-on-tablet hide-on-pc" style=" background-image: url('https://a0.muscache.com/im/pictures/3290306e-8e26-4c77-a96a-777e554c5222.jpg?im_w=320');">
+                            <div class="discover_description">
+                                <h1 class="discover_heading">Những điều nên trải nghiệm trong chuyến đi của bạn</h1>
+                                <label class="discover_button">Trải nghiệm</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__space "></div>
+                    <div class="col l-6">
+                        <div class="discover_image hide-on-mobile hide-on-tablet" style=" background-image: url('https://a0.muscache.com/im/pictures/c1bdf53f-2a19-4529-aa9b-1b0e6bd8d0ee.jpg?im_w=720');">
+                            <div class="discover_description">
+                                <h1 class="discover_heading">Những điều nên trải nghiệm tại nhà</h1>
+                                <label class="discover_button">Trải nghiệm trực tuyến</label>
+                            </div>
+                        </div>
+                        <div class="discover_image-tablet hide-on-mobile hide-on-pc" style=" background-image: url('https://a0.muscache.com/im/pictures/c1bdf53f-2a19-4529-aa9b-1b0e6bd8d0ee.jpg?im_w=720');">
+                            <div class="discover_description">
+                                <h1 class="discover_heading">Những điều nên trải nghiệm tại nhà</h1>
+                                <label class="discover_button">Trải nghiệm trực tuyến</label>
+                            </div>
+                        </div>
+
+                        <div class="discover_image-mobile hide-on-tablet hide-on-pc" style=" background-image: url('https://a0.muscache.com/im/pictures/c1bdf53f-2a19-4529-aa9b-1b0e6bd8d0ee.jpg?im_w=320');">
+                            <div class="discover_description">
+                                <h1 class="discover_heading">Những điều nên trải nghiệm tại nhà</h1>
+                                <label class="discover_button">Trải nghiệm trực tuyến</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="discover_image-full hide-on-mobile hide-on-tablet" style=" background-image: url('https://a0.muscache.com/im/pictures/0528b0f7-4c0c-47bc-9786-d91454f531ba.jpg?im_w=1200');">
+                    <div class="discover_description">
+                        <h1 class="discover_heading-full">Bạn có thắc mắc về việc đón tiếp khách?</h1>
+                        <labels class="discover_button">
+                            <span>  Hỏi ý kiến chủ nhà siêu cấp </span></labels>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="discover_image-full-mobile hide-on-pc hide-on-tablet" style="background-image: url('https://a0.muscache.com/im/pictures/8262da55-f57f-460a-88cd-67a1d07b6f80.jpg?im_w=720');">
+            <div class="discover_description">
+                <h1 class="discover_heading-full">Bạn có thắc mắc về việc đón tiếp khách?</h1>
+                <labels class="discover_button">
+                    <span>  Hỏi ý kiến chủ nhà siêu cấp </span></labels>
+            </div>
+        </div>
+        <div class="discover_image-full-tablet hide-on-pc hide-on-mobile" style="background-image: url('https://a0.muscache.com/im/pictures/8262da55-f57f-460a-88cd-67a1d07b6f80.jpg?im_w=720');">
+            <div class="discover_description">
+                <h1 class="discover_heading-full">Bạn có thắc mắc về việc đón tiếp khách?</h1>
+                <labels class="discover_button">
+                    <span>  Hỏi ý kiến chủ nhà siêu cấp </span></labels>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="grid">
+                <!-- <div class="row footer_padding  ">
+
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list">
+                            <ul style=" margin: 0; padding: 0;">
+                                <li class=" footer_list-label active"> Hỗ trợ</li>
+                                <li class=" footer_list-label">Trung tâm trợ giúp </li>
+                                <li class=" footer_list-label">Thông tin an toàn</li>
+                                <li class=" footer_list-label">Các tùy chọn hủy</li>
+                                <li class=" footer_list-label">Biện pháp ứng phó với đại dịch COVID-19 của chúng tôi</li>
+                                <li class=" footer_list-label">Hỗ trợ người khuyết tật</li>
+                                <li class=" footer_list-label">Báo cáo lo ngại của hàng xóm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list">
+                            <ul style=" margin: 0; padding: 0;">
+                                <li class=" footer_list-label active"> Cộng đồng</li>
+                                <li class=" footer_list-label">Airbnb.org: nhà ở cứu trợ </li>
+                                <li class=" footer_list-label">Hỗ trợ dân tị nạn Afghanistan</li>
+                                <li class=" footer_list-label">Vì sự đa dạng và thân thuộc</li>
+                                <li class=" footer_list-label">Chống phân biệt đối xử</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list">
+                            <ul style=" margin: 0; padding: 0;">
+                                <li class=" footer_list-label active"> Đón tiếp khách</li>
+                                <li class=" footer_list-label">Thử đón tiếp khách </li>
+                                <li class=" footer_list-label">AirCover: Bảo vệ cho host</li>
+                                <li class=" footer_list-label">Xem tài nguyên đó tiếp khách</li>
+                                <li class=" footer_list-label">Truy cập diễn đàn cộng đồng</li>
+                                <li class=" footer_list-label">Đón tiếp khách có trách nhiệm</li>
+                                <li class=" footer_list-label">Báo cáo lo ngại của hàng xóm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list">
+                            <ul style=" margin: 0; padding: 0;">
+                                <li class=" footer_list-label active"> Giới thiệu</li>
+                                <li class=" footer_list-label">Trang tin tức </li>
+                                <li class=" footer_list-label">Tìm hiểu các tính năng mới</li>
+                                <li class=" footer_list-label">Thư ngỏ từ các nhà sáng lập</li>
+                                <li class=" footer_list-label">Cơ hội nghề nghiệp </li>
+                                <li class=" footer_list-label">Nhà đầu tư</li>
+                                <li class=" footer_list-label">Airbnb Luxe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="row footer_padding ">
+
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list footer_border-tablet">
+                            <div class=" footer_list-label active"> Hỗ trợ</div>
+                            <ul style=" margin: 0; padding: 0;" class=" footer_list-tablet">
+
+                                <li class=" footer_list-label">Trung tâm trợ giúp </li>
+                                <li class=" footer_list-label">Thông tin an toàn</li>
+                                <li class=" footer_list-label">Các tùy chọn hủy</li>
+                                <li class=" footer_list-label">Biện pháp ứng phó với đại dịch COVID-19 của chúng tôi</li>
+                                <li class=" footer_list-label">Hỗ trợ người khuyết tật</li>
+                                <li class=" footer_list-label">Báo cáo lo ngại của hàng xóm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list footer_border-tablet">
+                            <div class=" footer_list-label active footer_list-label-tablet"> Cộng đồng</div>
+                            <ul style=" margin: 0; padding: 0;" class=" footer_list-tablet">
+
+                                <li class=" footer_list-label">Airbnb.org: nhà ở cứu trợ </li>
+                                <li class=" footer_list-label">Hỗ trợ dân tị nạn Afghanistan</li>
+                                <li class=" footer_list-label">Vì sự đa dạng và thân thuộc</li>
+                                <li class=" footer_list-label">Chống phân biệt đối xử</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list footer_border-tablet">
+                            <div class=" footer_list-label active"> Đón tiếp khách</div>
+                            <ul style=" margin: 0; padding: 0;" class=" footer_list-tablet">
+
+                                <li class=" footer_list-label">Thử đón tiếp khách </li>
+                                <li class=" footer_list-label">AirCover: Bảo vệ cho host</li>
+                                <li class=" footer_list-label">Xem tài nguyên đó tiếp khách</li>
+                                <li class=" footer_list-label">Truy cập diễn đàn cộng đồng</li>
+                                <li class=" footer_list-label">Đón tiếp khách có trách nhiệm</li>
+                                <li class=" footer_list-label">Báo cáo lo ngại của hàng xóm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col l-3 footer_border-mobile">
+                        <div class="footer_list footer_border-tablet">
+                            <div class=" footer_list-label active"> Giới thiệu</div>
+                            <ul style=" margin: 0; padding: 0;" class=" footer_list-tablet">
+
+                                <li class=" footer_list-label">Trang tin tức </li>
+                                <li class=" footer_list-label">Tìm hiểu các tính năng mới</li>
+                                <li class=" footer_list-label">Thư ngỏ từ các nhà sáng lập</li>
+                                <li class=" footer_list-label">Cơ hội nghề nghiệp </li>
+                                <li class=" footer_list-label">Nhà đầu tư</li>
+                                <li class=" footer_list-label">Airbnb Luxe</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="footer_coppyright">
+                    <div class="footer_coppyright-list">
+                        <div class="footer_list-item">
+                            <div class="footer_list-label-first">
+                                <div class="footer_list-item-label footer_active">© 2021 Airbnb, Inc.</div>
+                            </div>
+                            <div class="footer_list-label-second">
+                                <div class="footer_list-item-label">Quyền riêng tư</div>
+                                <div class="footer_list-item-label">Điều khoản</div>
+                                <div class="footer_list-item-label">Sơ đồ trang web</div>
+                            </div>
+                        </div>
+                        <div class="footer_list-icon">
+                            <div> <i class="fas fa-globe footer_icon-global js-language"><span> Tiếng Việt(VN)</span></i></div>
+                            <div class="footer_icon-currency js-currency">$ <span> USD</span></div>
+                            <div class="hide-on-mobile"><i class="fab fa-facebook-f footer_icon-social"></i></div>
+                            <div class="hide-on-mobile"> <i class="fab fa-twitter footer_icon-social"></i></div>
+                            <div class="hide-on-mobile"><i class="fab fa-instagram-square footer_icon-social"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modal">
+        <div class="modal_container">
+            <div class="modal_close">
+                <i class="fas fa-times modal-close-icon js-close"></i>
+            </div>
+            <header class="modal_suggest">
+                <h1 class="modal_suggest-label">Ngôn ngữ và khu vực đề xuất</h1>
+                <ul class="modal_suggest-ul">
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>United States</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>United Kingdom</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>Australia</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Francais</div>
+                            <div>France</div>
+                        </a>
+
+                    </li>
+
+                </ul>
+            </header>
+            <header class="modal_suggest">
+                <h1 class="modal_suggest-label">Ngôn ngữ và khu vực đề xuất</h1>
+                <ul class="modal_suggest-ul">
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Tiếng Việt</div>
+                            <div>Việt Nam</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Azərbaycan dili</div>
+                            <div>Azərbaycan</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Bahasa Indonesia</div>
+                            <div>Indonesia</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Bosanski</div>
+                            <div>Bosna i Hercegovina</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Català</div>
+                            <div>Espanya</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Čeština</div>
+                            <div>Česká republika</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Crnogorski</div>
+                            <div>Crna Gora</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Dansk</div>
+                            <div>Danmark</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Deutsch</div>
+                            <div>Deutschland</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Deutsch</div>
+                            <div>Österreich</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Deutsch</div>
+                            <div>Schweiz</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Eesti</div>
+                            <div>Eesti</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>Canada</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>Guyana</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>India</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>Ireland</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>New Zealand</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>Singapore</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>English</div>
+                            <div>United Arab Emirates</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Argentina</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Belice</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Bolivia</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Chile</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Colombia</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Costa Rica</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Ecuador</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>El Salvador</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>España</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Estados Unidos</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Guatemala</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Honduras</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Latinoamérica</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>México</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Nicaragua</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Panamá</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Paraguay</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Perú</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Español</div>
+                            <div>Venezuela</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Francais</div>
+                            <div>Belgique</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Francais</div>
+                            <div>Canada</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Français</div>
+                            <div>Suisse</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Gaeilge</div>
+                            <div>Éire</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Hrvatski</div>
+                            <div>Hrvatska</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>isiXhosa</div>
+                            <div>eMzantsi Afrika</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>isiZulu</div>
+                            <div>iNingizimu Afrika</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Íslenska </div>
+                            <div>Ísland</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Italiano</div>
+                            <div>Italia</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Italiano</div>
+                            <div>Svizzera</div>
+                        </a>
+
+                    </li>
+                    <!---->
+
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>繁體中文</div>
+                            <div>台灣</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>繁體中文</div>
+                            <div>香港</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>简体中文 </div>
+                            <div>中国</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>繁體中文</div>
+                            <div>美國</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>简体中文</div>
+                            <div>美国</div>
+                        </a>
+
+                    </li>
+                </ul>
+            </header>
+
+        </div>
+
+    </div>
+    <div class="modal_currency">
+        <div class="modal_container_currency">
+            <div class="modal_close">
+                <i class="fas fa-times modal-close-icon js-close"></i>
+            </div>
+
+            <header class="modal_suggest">
+                <h1 class="modal_suggest-label">Chọn loại tiền tệ</h1>
+                <ul class="modal_suggest-ul">
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la Mỹ</div>
+                            <div>USD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Baht Thái Lan</div>
+                            <div>THB - ฿</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Bảng Anh</div>
+                            <div>GBP - £</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Colon Costa Rica</div>
+                            <div>CRC - ₡</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Dirham Ma-rốc</div>
+                            <div>MAD</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Dirham các tiểu vương quốc Ả Rập thống nhất</div>
+                            <div>AED - ﺩ.ﺇ</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Euro</div>
+                            <div>EUR - €</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Forint Hungary</div>
+                            <div>HUF - Ft</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Franc Thụy Sĩ</div>
+                            <div>CHF</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Koruna Séc</div>
+                            <div>CZK - Kč</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Krona Thụy Điển</div>
+                            <div>SEK - kr</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Krone Na Uy</div>
+                            <div>NOK - kr</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Krone Đan Mạch</div>
+                            <div>DKK - kr</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Koruna Séc</div>
+                            <div>CZK - Kč</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Krona Thụy Điển</div>
+                            <div>SEK - kr</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Krone Na Uy</div>
+                            <div>NOK - kr</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Krone Đan Mạch</div>
+                            <div>DKK - kr</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Kuna Croatia</div>
+                            <div>HRK - kn</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Leu Rumani</div>
+                            <div>RON - lei</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Lev Bulgaria</div>
+                            <div>BGN - лв.</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Lira Thổ Nhĩ Kỳ</div>
+                            <div>TRY - ₺</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Nhân dân tệ Trung Quốc </div>
+                            <div>CNY - ￥</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Peso Chile</div>
+                            <div>CLP - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Peso Colombia</div>
+                            <div>COP - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Peso Mexico</div>
+                            <div>MXN - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Peso Philippines</div>
+                            <div>PHP - ₱</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Peso Uruguay</div>
+                            <div>UYU - $U</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Rand Nam Phi</div>
+                            <div>ZAR - R</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Real Brazil</div>
+                            <div>BRL - R$</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Ringgit Malaysia</div>
+                            <div>MYR - RM</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Riyal Ả Rập Saudi</div>
+                            <div>SAR - SR</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Rupee Ấn Độ</div>
+                            <div>INR - ₹</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Won Hàn Quốc</div>
+                            <div>KRW - ₩</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Yên Nhật</div>
+                            <div>JPY - ¥</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la Canada </div>
+                            <div>CAD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la Hồng Kông</div>
+                            <div>HKD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la New Zealand</div>
+                            <div>NZD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la Singapore</div>
+                            <div>SGD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la Úc</div>
+                            <div>AUD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đô la Đài Loan mới</div>
+                            <div>TWD - $</div>
+                        </a>
+
+                    </li>
+                    <li class="modal_suggest-item">
+                        <a href="/">
+                            <div>Đồng rúp Nga</div>
+                            <div>RUB - ₽</div>
+                        </a>
+
+                    </li>
+
+                </ul>
+            </header>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <script src="assesst/css/main.js"></script>
+</body>
+
+</html>

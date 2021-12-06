@@ -1,0 +1,30 @@
+:root {
+    --white-color: #fff;
+    --text-color: #222222;
+    --black-color: #000000;
+    --border-color: #dddddd;
+    --color-71: #717171;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    /* tuong đương 10px*/
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY( 200px);
+        opacity: 0;
+    }
+    to {
+        transform: transscaleY( 0);
+        opacity: 1;
+    }
+}
